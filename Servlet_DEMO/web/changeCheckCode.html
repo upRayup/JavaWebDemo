@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+        window.onload=function () {
+            document.getElementById("imgchange").onclick=function () {
+                var time=new Date().getTime();
+                this.src="/Servlet_Demo/checkCodepic?"+time;
+            }
+            document.getElementById("achange").onclick=function () {
+                var time=new Date().getTime();
+                document.getElementById("imgchange").src="/Servlet_Demo/checkCodepic?"+time;
+            }
+        }
+    </script>
+</head>
+<body>
+    <img id="imgchange" src="/Servlet_Demo/checkCodepic">
+    <a id="achange" href="javascript:void(null);" >看不清？点我换图！</a>
+</body>
+</html>
